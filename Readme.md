@@ -42,11 +42,11 @@ Nous avons mis en place un pipeline ELT (Extract, Load, Transform) complet, inte
 ### 2. Stratégie de Données : Architecture "Medaillon"
 Pour garantir l'intégrité des données, nous avons structuré la base de données Neon en couches distinctes, sans jamais écraser la donnée source :
 
-| Couche (Layer) | Nom de la Table (SQL) | Description & Usage |
-|    |    |    |
-| **Bronze (Raw)** | `loan_approval_raw` | Donnée brute, telle qu'importée du CSV. Sert de backup immuable. |
-| **Silver (Clean)** | `loan_approval_clean` | Donnée nettoyée, typée et standardisée. Source principale pour **Power BI** (contient les ID et libellés). |
-| **Gold (ML Ready)** | *(Géré via Python et DAX)* | Vue optimisée pour le Machine Learning : suppression des ID, encodage des variables catégorielles (One-Hot/Label Encoding). |
+│ Couche (Layer) │ Nom de la Table (SQL) │ Description & Usage │
+│    │    │    │
+│ **Bronze (Raw)** │ `loan_approval_raw` │ Donnée brute, telle qu'importée du CSV. Sert de backup immuable. │
+│ **Silver (Clean)** │ `loan_approval_clean` │ Donnée nettoyée, typée et standardisée. Source principale pour **Power BI** (contient les ID et libellés). │
+│ **Gold (ML Ready)** │ *(Géré via Python et DAX)* │ Vue optimisée pour le Machine Learning : suppression des ID, encodage des variables catégorielles (One-Hot/Label Encoding). │
 
 ![Architecture "Medaillon"](Image/Pipeline_Projet_BankingRisk.png)
   
@@ -78,21 +78,21 @@ projet-banking-risk
 │
 ├── 📂 dataset/
 │   ├── raw/          # Datasets bruts (ne pas modifier)
-|       ├── loan_approval_raw.csv
-|       └── loan_confirmation_raw.csv
+│       ├── loan_approval_raw.csv
+│       └── loan_confirmation_raw.csv
 │   └── processed/    # Datasets nettoyés (Silver layer)
-|       ├── loan_approval_clean.csv
-|       └── loan_confirmation_clean.csv
-|
+│       ├── loan_approval_clean.csv
+│       └── loan_confirmation_clean.csv
+│
 ├── 📷 image/
 │   └── 10 photos - All graphics of notebook  # All final photos
-|
+│
 ├── 🗒️ notebooks/
-|   └── Loan_Final_Project.ipynb  # Pipeline complet : Cleaning, EDA, ML
-|
+│   └── Loan_Final_Project.ipynb  # Pipeline complet : Cleaning, EDA, ML
+│
 ├── 🎇 report/
-|   ├── Loan-Project_Fullstack-Jedha-DataAnalysis-2026.mp4  # Video support de présentation
-|   └── Loan-Project_Fullstack-Jedha-DataAnalysis-2026.pdf # Pdf support de présentation
+│   ├── Loan-Project_Fullstack-Jedha-DataAnalysis-2026.mp4  # Video support de présentation
+│   └── Loan-Project_Fullstack-Jedha-DataAnalysis-2026.pdf # Pdf support de présentation
 │
 └── 🗒️ Readme.md
 ```
