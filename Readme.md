@@ -37,7 +37,7 @@ Pour garantir l'intégrité des données, nous avons structuré la base de donn�
 | **Silver (Clean)** | `loan_approval_clean` | Donnée nettoyée, typée et standardisée. Source principale pour **Power BI** (contient les ID et libellés). |
 | **Gold (ML Ready)** | *(Géré via Python et DAX)* | Vue optimisée pour le Machine Learning : suppression des ID, encodage des variables catégorielles (One-Hot/Label Encoding). |
 
-![Architecture "Medaillon"](Image\Pipeline_Projet_BankingRisk.png)
+![Architecture "Medaillon"](Image/Pipeline_Projet_BankingRisk.png)
 
 ---
 
