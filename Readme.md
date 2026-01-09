@@ -18,18 +18,17 @@ Dans un contexte où l’accès au crédit est un levier de développement écon
 
 ## 📊 Résultats Clés & Insights Métier
 L'analyse exploratoire et la modélisation ont permis de dégager trois axes stratégiques :  
-**Corrélation Score/Risque** : Aux USA, les clients "Risky" paient jusqu'à 20% d'intérêts. Ce Risk-Based Pricing est absent en Inde et doit être implémenté.
+**Corrélation Score/Risque** : Aux USA, les clients "Risky" paient jusqu'à 20% d'intérêts. Ce Risk-Based Pricing est absent en Inde et doit être implémenté.  
 **Facteurs de Solvabilité** : La durée du prêt est critique. Les prêts courts (< 6 ans) présentent un meilleur taux de remboursement.  
 
 ### Performance du Modèle
-**Algorithme retenu** :  
-**Logistic Regression** vs Random Forest.  
-COMPARATIF PRÉCISION (Sécurité Bancaire)  
+**Algorithme retenu** : ***Logistic Regression*** vs Random Forest.  
+COMPARATIF PRÉCISION *(Sécurité Bancaire)*  
 Logistic Regression : 90.06%  
 Random Forest       : 89.57%      
 Difference          : 0.49%      
-**Gagnant** : Logistic Regression (Plus sûr pour la banque)        
---- 
+**Gagnant** : Logistic Regression *(Plus sûr pour la banque)*        
+
 ## ⚙️ Architecture Technique & Pipeline de Données
 
 Nous avons mis en place un pipeline ELT (Extract, Load, Transform) complet, interconnectant Python, une base de données Cloud et des outils de Business Intelligence.
